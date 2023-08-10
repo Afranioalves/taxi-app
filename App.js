@@ -1,20 +1,35 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import {useCallback} from 'react';
+import { View } from 'react-native';
+import { useFonts } from "expo-font";
+import * as SplashScreen from 'expo-splash-screen';
+import Router from "./src/routes"
+import {Provider} from "./src/context"
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+SplashScreen.preventAutoHideAsync();
+
+const App = () =>{
+  
+  const [fontsLoaded] = useFonts({
+    "NunitoSansBold": require("./assets/fonts/NunitoSansBold.ttf"),
+    "NunitoSansSemiBold": require("./assets/fonts/NunitoSansSemiBold.ttf"),
+    "NunitoSansExtraBold": require("./assets/fonts/NunitoSansExtraBold.ttf"),
+    "NunitoSansRegular": require("./assets/fonts/NunitoSansRegular.ttf"),
+    "NunitoSansMedium": require("./assets/fonts/NunitoSansMedium.ttf"),
+    "NunitoSansBlack": require("./assets/fonts/NunitoSansBlack.ttf"),
+  
+  });
+
+  const onLayoutRootView = useCallback(async () => {
+    if (fontsLoaded) {
+      await SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded]);
+
+  if (!fontsLoaded) return null;
+
+  return <Provider><View onLayout={onLayoutRootView} style={{flex:1}}><Router/></View></Provider> 
+
+  
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App

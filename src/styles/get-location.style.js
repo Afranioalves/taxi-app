@@ -1,0 +1,112 @@
+import { StyleSheet, Dimensions } from "react-native";
+
+const {height} = Dimensions.get('window')
+
+export const styles = StyleSheet.create({
+    container:{
+        flex:1,
+        backgroundColor:"#fff",
+        paddingTop:64,
+        paddingHorizontal:24,
+        position:'relative'
+    },
+    title:{
+        fontFamily:"NunitoSansBlack",
+        fontSize:24
+    },
+    description:{
+        fontFamily:"NunitoSansBold",
+        marginTop:8,
+        fontSize:16,
+        borderBottomWidth:4,
+        width:60,
+        paddingBottom:6,
+        borderBottomColor:'#FACD1A'
+    },
+    info:{
+        fontSize:17,
+        fontFamily:"NunitoSansMedium",
+        marginTop:40,
+        textAlign:'center',
+        lineHeight:30,
+        color:"#4B4B4B"
+    },
+    inputField:{
+        alignItems:'center',
+        marginTop:40,
+        position:'relative',
+        flexDirection:'row',
+        height:60,
+        borderRadius:24,
+        width:260,
+        paddingHorizontal:24,
+        gap:8,
+        backgroundColor:"#F5F5F5",
+        justifyContent:'space-between'
+    }
+    ,
+    text:{ 
+        fontFamily:"NunitoSansBold",
+        fontSize: 18,
+    },
+    containerInput:{
+        alignItems:'center'
+    },
+    bar:{
+        color:"#BCBCBC"
+    },
+    countryCode:{
+        fontFamily:"NunitoSansBold",
+        fontSize:14
+    },
+    emoji:{
+      fontSize:20
+    },
+    containerButtons:{
+        /*position:'absolute',
+        bottom:48,*/
+        width:'100%',
+        alignSelf:'center',
+        gap:12,
+        marginTop:(height/2)-64
+    },
+      buttonSend:{
+        backgroundColor:'#FACD1A',
+        width:'100%',
+        height:55,
+        borderRadius:4,
+        alignItems:'center',
+        justifyContent:'center'
+      },
+      textSend:{
+        fontFamily:"NunitoSansBold",
+        fontSize:16
+      },
+      buttonEdit:{
+        
+      },
+      boxContact:{
+        flexDirection:'row',
+        alignItems:'center',
+        gap:8
+      },
+      inputCodes:{
+        //width:'100%',
+        marginTop:40,
+        flexDirection:'row',
+        justifyContent:'space-between',
+        gap:12
+       
+      },
+      input:{
+        width:60,
+        height:60,
+        borderRadius:18,
+        backgroundColor:'#f1f1f1',
+        fontFamily:"NunitoSansBold",
+        fontSize:24,
+        textAlign:'center'
+      }
+
+})
+
