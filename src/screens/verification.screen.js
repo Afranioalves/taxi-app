@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { View, Text, Pressable, TextInput } from "react-native"
 import { styles } from "../styles/verification.style"
-import { Feather } from '@expo/vector-icons';
+import Feather from '@expo/vector-icons/Feather';
 import * as NavigationBar from 'expo-navigation-bar';
 
 const Verification = ({navigation}) =>{
@@ -15,7 +15,7 @@ const Verification = ({navigation}) =>{
             <Text style={styles.title}>Verificação</Text>
             <Text style={styles.description}>Código</Text>
             <Text style={styles.info}>
-                Código de verificação foi enviado com{'\n'} sucesso, no seguinte número
+                Código de verificação foi enviado com sucesso, no seguinte número
             </Text>
             <View style={styles.containerInput}>
                 

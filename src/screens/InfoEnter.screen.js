@@ -38,7 +38,7 @@ const InfoEnter = ({navigation}) =>{
             <Text style={styles.title}>Credêncial</Text>
             <Text style={styles.description}>Dados</Text>
             <Text style={styles.info}>
-                Estamos finalizando, introduza seu {'\n'}nome e uma password forte
+                Estamos finalizando, introduza seu nome e uma password forte
             </Text>
             <View style={styles.containerInput}>
                 

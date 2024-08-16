@@ -19,7 +19,7 @@ export const styles = StyleSheet.create({
         marginTop:8,
         fontSize:16,
         borderBottomWidth:4,
-        width:60,
+        width:65,
         paddingBottom:6,
         borderBottomColor:'#FACD1A'
     },
@@ -68,7 +68,7 @@ export const styles = StyleSheet.create({
         width:'100%',
         alignSelf:'center',
         gap:12,
-        marginTop:(height/2)-64
+        marginTop:(height/2)-124
     },
       buttonSend:{
         backgroundColor:'#FACD1A',

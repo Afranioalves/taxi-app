@@ -19,7 +19,7 @@ export const styles = StyleSheet.create({
         marginTop:8,
         fontSize:16,
         borderBottomWidth:4,
-        width:65,
+        width:70,
         paddingBottom:6,
         borderBottomColor:'#FACD1A'
     },
